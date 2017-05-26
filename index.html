@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trivia Game!</title>
+<script type="text/javascript" src="app.js">
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body background="wallpaper-resources-titles-wallpapers-lol-selection-images.jpg"> 
+<form>
+<h1>Totally Trivial Trivia!</h1>
+<h2>Time Remaining:</h2> <div id="countdown">31</div>
+<script type="text/javascript">
+  var seconds;
+  var temp;
+ 
+  function countdown() {
+    seconds = document.getElementById('countdown').innerHTML;
+    seconds = parseInt(seconds, 10);
+ 
+    if (seconds == 1) {
+      temp = document.getElementById('countdown');
+      temp.innerHTML = "Time Out";
+      return;
+    }
+ 
+    seconds--;
+    temp = document.getElementById('countdown');
+    temp.innerHTML = seconds;
+    timeoutMyOswego = setTimeout(countdown, 1000);
+  } 
+ 
+  countdown();
+</script>
+
+<h3>What was the first full length CGI Movie?</h3>
+Toy Story
+<input type="radio" name="What was the first full length CGI Movie?" value="Toy Story">
+Tron
+<input type="radio" name="What was the first full length CGI Movie?" value="Tron">
+The Polar Express
+<input type="radio" name="What was the first full length CGI Movie?" value="The Polar Express">
+Transformers
+<input type="radio" name="What was the first full length CGI Movie?" value="Transformers"><br>
+<h3>Which of this in NOT a name one Spicy Girl?</h3>
+Jennifer
+<input type="radio" name="Which of this in NOT a name one Spicy Girl?" value="Jennifer">
+Sasha Geffen 
+<input type="radio" name="Which of this in NOT a name one Spicy Girl?" value="SASHA GEFFEN">
+Stacey
+<input type="radio" name="Which of this in NOT a name one Spicy Girl?" value="Stacey">
+Lucy
+<input type="radio" name="Which of this in NOT a name one Spicy Girl?" value="Lucy"><br>
+<h3>Which NBA team won the most title in the 90s?</h3>
+San Antonio Spurs 
+<input type="radio" name="Which NBA team won the most title in the 90s?" value="San Antonio Spurs">
+Los Angeles Lakers 
+<input type="radio" name="Which NBA team won the most title in the 90s?" value="Los Angeles Lakers">
+Utah Jazz 
+<input type="radio" name="Which NBA team won the most title in the 90s?" value="Utah Jazz">
+Oklahoma City Thunder 
+<input type="radio" name="Which NBA team won the most title in the 90s?" value="Oklahoma City Thunder"><br>
+<input type="submit" value="Done"></button>
+</form>
+
+</body>
+</html>
